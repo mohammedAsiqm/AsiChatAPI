@@ -1,8 +1,8 @@
+require('dotenv').config();
 const express = require("express");
 const app = express();
-const port = 8080;
+const port = process.env.PORT || 8000;
 const http = require("http");
-const serverlessHttp = require("serverless-http");
 
 const server = http.createServer(app);
 
@@ -18,5 +18,4 @@ server.listen(port, (err) => {
   console.log("Server running on port - " + port);
 });
 
-
-module.exports = serverlessHttp(server);
+module.exports = server;
