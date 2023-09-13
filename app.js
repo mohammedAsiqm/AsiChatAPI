@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 const port = 8080;
 const http = require("http");
+const serverlessHttp = require("serverless-http");
 
 const server = http.createServer(app);
 
@@ -16,3 +17,6 @@ server.listen(port, (err) => {
   if (err) return console.log("Internal Server Error!");
   console.log("Server running on port - " + port);
 });
+
+
+module.exports = serverlessHttp(server);
