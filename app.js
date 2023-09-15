@@ -6,11 +6,11 @@ const http = require("http");
 
 const server = http.createServer(app);
 
-app.get("/", (req, res) => {
+app.get("/api", (req, res) => {
   res.send("Api working");
 });
 app.get("/json", (req, res) => {
-  res.json({ version: "1.0", status: "Working" });
+  res.json({ version: "1.0", status: "Working", location : 'aws - ec2' });
 });
 
 server.listen(port, (err) => {
