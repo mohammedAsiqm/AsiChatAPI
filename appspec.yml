@@ -8,13 +8,6 @@ files:
     destination: /
     overwrite: true
 
-permissions:
-  - object: /
-    pattern: "**"
-    owner: ubuntu
-    group: ubuntu
-
-
 hooks:
 
   BeforeInstall:
