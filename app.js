@@ -10,7 +10,7 @@ app.get("/api", (req, res) => {
   res.send("Api working");
 });
 app.get("/json", (req, res) => {
-  res.json({ version: "1.0", status: "Working", location : 'aws - ec2' });
+  res.json({ version: "2.0", status: "Working", location : 'aws - ec2' });
 });
 
 server.listen(port, (err) => {
