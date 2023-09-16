@@ -7,7 +7,7 @@ const http = require("http");
 const server = http.createServer(app);
 
 app.get("/api", (req, res) => {
-  res.send("Api working");
+  res.send("Api working 1");
 });
 app.get("/json", (req, res) => {
   res.json({ version: "2.0", status: "Working", location : 'aws - ec2' });
